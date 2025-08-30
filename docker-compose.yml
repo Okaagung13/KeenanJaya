@@ -10,8 +10,8 @@ services:
       - "9096:80"
     volumes:
       - .:/var/www/html
-      - cania_cache:/var/www/html/application/cache
-      - cania_logs:/var/www/html/application/logs
+      - keenanjaya_cache:/var/www/html/application/cache
+      - keenanjaya_logs:/var/www/html/application/logs
     depends_on:
       - db
     restart: unless-stopped

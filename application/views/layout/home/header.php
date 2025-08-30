@@ -13,14 +13,14 @@ License: You must have a valid license purchased only from themeforest(the above
 
 <head>
     <meta charset="utf-8">
-    <link href="<?= site_url('asset') ?>/admin/dist/images/logo.svg" rel="shortcut icon">
+    <link href="<?= base_url('asset') ?>/admin/dist/images/logo.svg" rel="shortcut icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Icewall admin is super flexible, powerful, clean & modern responsive tailwind admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Icewall Admin Template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="LEFT4CODE">
     <title><?= $title ?> | Keenan Jaya</title>
     <!-- BEGIN: CSS Assets-->
-    <link rel="stylesheet" href="<?= site_url('asset') ?>/admin/dist/css/app.css" />
+    <link rel="stylesheet" href="<?= base_url('asset') ?>/admin/dist/css/app.css" />
     <script type="text/javascript" src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-kmbmTlxtNRFjaL3L"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- END: CSS Assets-->
@@ -32,7 +32,7 @@ License: You must have a valid license purchased only from themeforest(the above
     <div class="mobile-menu md:hidden">
         <div class="mobile-menu-bar">
             <a href="" class="flex mr-auto">
-                <img alt="Midone - HTML Admin Template" class="w-6" src="<?= site_url('asset') ?>/admin/dist/images/logo.svg">
+                <img alt="Midone - HTML Admin Template" class="w-6" src="<?= base_url('asset') ?>/admin/dist/images/logo.svg">
             </a>
             <a href="javascript:;" class="mobile-menu-toggler"> <i data-lucide="bar-chart-2" class="w-8 h-8 text-white transform -rotate-90"></i> </a>
         </div>
@@ -674,7 +674,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <div class="h-full flex items-center">
             <!-- BEGIN: Logo -->
             <a href="" class="-intro-x hidden md:flex">
-                <img alt="Midone - HTML Admin Template" class="w-6" src="<?= site_url('asset') ?>/admin/dist/images/logo.svg">
+                <img alt="Midone - HTML Admin Template" class="w-6" src="<?= base_url('asset') ?>/admin/dist/images/logo.svg">
                 <span class="text-white text-lg ml-3"> Keenan Jaya</span>
             </a>
             <!-- END: Logo -->

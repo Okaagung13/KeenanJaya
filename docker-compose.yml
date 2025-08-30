@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: KeenanJaya
+    ports:
+      - "9096:80"
+    volumes:
+      - .:/var/www/html
+      - cania_cache:/var/www/html/application/cache
+      - cania_logs:/var/www/html/application/logs
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  db:
+    image: mysql:5.7
+    container_name: keenanjaya_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: keenanjaya
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3310:3306"
+    volumes:
+      - ./db/keenanjaya.sql:/docker-entrypoint-initdb.d/init.sql
+      - keenanjaya_db_data:/var/lib/mysql
+
+volumes:
+  keenanjaya_db_data:
+  keenanjaya_cache:
+  keenanjaya_logs:

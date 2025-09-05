@@ -12,8 +12,14 @@ class Laporan extends CI_Controller
 
     public function index()
     {
+        if ($this->session->userdata('level') != '1') {
+			redirect('welcome');
+		}
+        $data['title'] = 'Laporan Penjualan';
         $data['laporan'] = $this->Laporan_model->get_all_orders();
-        $this->load->view('admin/laporan/export_pdf', $data);
+        $this->load->view('layout/admin/header', $data);
+		$this->load->view('admin/laporan/Laporan', $data);
+		$this->load->view('layout/admin/footer');
     }
 
      public function export_pdf()

@@ -26,6 +26,7 @@
                                 </th>
                                 <th class="whitespace-nowrap !py-5">Product Item</th>
                                 <th class="whitespace-nowrap text-right">Unit Price</th>
+                                <th class="whitespace-nowrap text-right">Size</th>
                                 <th class="whitespace-nowrap text-right">Qty</th>
                                 <th class="whitespace-nowrap text-right">Total</th>
                             </tr>
@@ -44,6 +45,7 @@
                                         </div>
                                     </td>
                                     <td class="text-right">Rp. <?= number_format($items['price'], 0, ',', '.') ?></td>
+                                    <td class="text-right"><?= $items['options']['size']; ?></td>
                                     <td class="text-right"><?= number_format($items['qty'], 0, ',', '.') ?></td>
                                     <td class="text-right">Rp. <?= number_format($items['subtotal'], 0, ',', '.') ?></td>
                                 </tr>

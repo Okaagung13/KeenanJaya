@@ -5,7 +5,7 @@
             <div class="intro-y box p-5">
                 <div class="flex items-center justify-between mb-5">
                     <h2 class="text-lg font-medium">Laporan Penjualan</h2>
-                    <a href="<?= site_url('laporan/export1_pdf') ?>" class="btn btn-danger text-white">Export PDF</a>
+                    <a href="<?= site_url('admin/laporan/export_pdf') ?>" class="btn btn-danger text-white">Export PDF</a>
                 </div>
                 <div class="overflow-x-auto">
                     <table class="table table-bordered">

@@ -51,13 +51,15 @@ class Product extends CI_Controller
 			}
 		}
 
+		$sizes = $this->input->post('sizes') ? implode(',', $this->input->post('sizes')) : '';
 		$data = array(
 			'nama_brg' 	=> $nama_brg,
 			'keterangan' 	=> $keterangan,
 			'kategori' 	=> $kategori,
 			'harga' 	=> $harga,
 			'stok' 	=> $stok,
-			'gambar' 	=> $gambar
+			'gambar' 	=> $gambar,
+			'sizes' 		=> $sizes
 		);
 
 		$this->model_pembayaran->insert($data, 'product');
@@ -83,13 +85,15 @@ class Product extends CI_Controller
 		$kategori 		= $this->input->post('kategori');
 		$harga 			= $this->input->post('harga');
 		$stok 			= $this->input->post('stok');
+		$sizes 			= $this->input->post('sizes') ? implode(',', $this->input->post('sizes')) : '';
 
 		$data = array(
 			'nama_brg' 		=> $nama_brg,
 			'keterangan' 	=> $keterangan,
 			'kategori' 		=> $kategori,
 			'harga' 		=> $harga,
-			'stok' 			=> $stok
+			'stok' 			=> $stok,
+			'sizes' 		=> $sizes
 		);
 
 		$where = array(

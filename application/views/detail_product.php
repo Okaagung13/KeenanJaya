@@ -26,31 +26,44 @@
                    <div class="flex items-center border-b border-slate-200/60 dark:border-darkmode-400 pb-5 mb-5">
                        <div class="font-medium text-base truncate">Product Detail</div>
                    </div>
-                   <div class="overflow-auto lg:overflow-visible -mt-3">
-                       <table class="table table-striped">
-                           <thead>
-                               <tr>
-                                   <th class="whitespace-nowrap !py-5">Product Item</th>
-                                   <th>Unit Price</th>
-                                   <th>Qty</th>
-                                   <th>Kategori</th>
-                               </tr>
-                           </thead>
-                           <tbody>
+                   <form action="<?= site_url('dashboard/cart/' . $row->id_brg) ?>" method="post">
+                       <div class="overflow-auto lg:overflow-visible -mt-3">
+                           <table class="table table-striped">
+                               <thead>
+                                   <tr>
+                                       <th class="whitespace-nowrap !py-5">Product Item</th>
+                                       <th>Unit Price</th>
+                                       <th>Qty</th>
+                                       <th>Kategori</th>
+                                       <th>Sizes</th>
+                                   </tr>
+                               </thead>
+                               <tbody>
                                    <tr>
                                        <td class="!py-4">
                                            <div class="flex items-center">
-                                            <img src="<?= base_url() . '/uploads/' . $row->gambar ?>" width="40px">
+                                               <img src="<?= base_url() . '/uploads/' . $row->gambar ?>" width="40px">
                                                <a href="" class="font-medium whitespace-nowrap ml-4"><?= $row->nama_brg ?></a>
                                            </div>
                                        </td>
                                        <td>Rp. <?= number_format($row->harga, 0, ',', '.') ?></td>
                                        <td><?= number_format($row->stok, 0, ',', '.') ?> Item</td>
                                        <td><?= $row->kategori ?></td>
+                                       <td>
+                                           <select name="size" class="form-select">
+                                               <?php foreach (explode(',', $row->sizes) as $size) : ?>
+                                                   <option value="<?= $size ?>"><?= $size ?></option>
+                                               <?php endforeach; ?>
+                                           </select>
+                                       </td>
                                    </tr>
-                           </tbody>
-                       </table>
-                   </div>
+                               </tbody>
+                           </table>
+                       </div>
+                       <div class="flex justify-end mt-4">
+                           <button type="submit" class="btn btn-primary">Add to Cart</button>
+                       </div>
+                   </form>
                </div>
            </div>
        </div>

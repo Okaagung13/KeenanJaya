@@ -25,6 +25,7 @@ class Dashboard extends CI_Controller
 	public function cart($id)
 	{
 		$product = $this->model_pembayaran->find($id);
+		$size = $this->input->post('size');
 
 		$data = array(
 			'id'      => $product->id_brg,
@@ -34,7 +35,8 @@ class Dashboard extends CI_Controller
 			'options' => array(
 				'keterangan' => $product->keterangan,
 				'kategori' => $product->kategori,
-				'gambar' => $product->gambar
+				'gambar' => $product->gambar,
+				'size' => $size
 			)
 		);
 

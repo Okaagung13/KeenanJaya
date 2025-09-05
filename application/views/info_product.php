@@ -34,6 +34,7 @@
                                    <th>Unit Price</th>
                                    <th>Qty</th>
                                    <th>Kategori</th>
+                                   <th>Sizes</th>
                                </tr>
                            </thead>
                            <tbody>
@@ -47,6 +48,7 @@
                                        <td>Rp. <?= number_format($row->harga, 0, ',', '.') ?></td>
                                        <td><?= number_format($row->stok, 0, ',', '.') ?> Item</td>
                                        <td><?= $row->kategori ?></td>
+                                       <td><?= $row->sizes ?></td>
                                    </tr>
                            </tbody>
                        </table>

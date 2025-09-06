@@ -123,7 +123,7 @@
                                     </div>
                                 </div>
                                 <div class="w-full mt-3 xl:mt-0 flex-1">
-                                    <select name="sizes[]" class="form-select" multiple>
+                                    <select name="sizes[]" class="form-select tom-select" multiple>
                                         <?php for ($i = 36; $i <= 45; $i++) : ?>
                                             <option value="<?= $i ?>"><?= $i ?></option>
                                         <?php endfor; ?>

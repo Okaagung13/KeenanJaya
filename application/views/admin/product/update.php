@@ -47,7 +47,7 @@
                                             </div>
                                             <div class="mt-3">
                                                 <label for="update-profile-form-6" class="form-label">Available Sizes</label>
-                                                <select id="update-profile-form-6" name="sizes[]" class="form-select" multiple>
+                                                <select id="update-profile-form-6" name="sizes[]" class="form-select tom-select" multiple>
                                                     <?php 
                                                         $selected_sizes = explode(',', $row->sizes ?? '');
                                                         for ($i = 36; $i <= 45; $i++) : 

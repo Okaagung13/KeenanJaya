@@ -27,7 +27,7 @@
                 <th>No </th>
                 <th>ID Pesanan</th>
                 <th>Nama Pembeli</th>
-                <!---  <th>Total Bayar</th> --->
+                <th>Total Bayar</th>
                 <th>Status</th>
                 <th>Tanggal</th>
             </tr>
@@ -38,7 +38,7 @@
                 <td><?= $no++ ?></td>
                 <td><?= $row->order_id ?></td>
                 <td><?= $row->name ?></td>
-                <!---  <td>Rp <?= number_format($row->total_bayar ?? 0, 0, ',', '.') ?></td> --->
+                <td>Rp <?= number_format($row->total_bayar ?? 0, 0, ',', '.') ?></td>
                 <td><?= $row->status ?? 'Belum Diketahui' ?></td>
                 <td><?= $row->transaction_time ?></td>
             </tr>
